@@ -1,0 +1,36 @@
+<!-- FAQ Accordian View-->
+<div id="container">
+    <div *ngIf="faqData">
+    <div class="background">
+     <div class="heading">FAQs</div>
+
+     <!-- iteration throgh objects of question and answers -->
+     <div *ngFor = "let data of faqData">
+        <div class="updateform-div">
+            <div id="accordion">
+                <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+
+                        <!--Question Link-->
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            {{data.question}}
+                    </button>
+                    </h5>
+                </div>
+
+                <!--Answers of particular question-->
+            
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                            {{data.answer}}
+                    </div>
+                </div>
+                </div>
+         </div>
+         </div>
+        </div>
+        </div>
+    </div>
+</div>
+            

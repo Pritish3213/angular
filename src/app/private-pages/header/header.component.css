@@ -1,0 +1,23 @@
+*{
+    font-size: 15px;
+    font-weight: bold;
+    color: grey;
+}
+
+ul{
+    margin-right: 0px;
+    position: relative;
+}
+.d{
+    z-index: 10;
+    top: 1000;
+    margin-right: 900px;
+    margin-top: 10px;
+    width: 50px;
+    font-size: 1vw;
+}
+.g{
+    color: rgb(4, 201, 4);
+    font-size: 1vw;
+}
+

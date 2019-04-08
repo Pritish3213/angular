@@ -1,0 +1,97 @@
+<!--Registration Form-->
+<div class="registerform-div">
+  <h2>REGISTER</h2>
+  <hr>
+  <!--REgistration Validation-->
+  <p *ngIf="successMsg && registerForm.valid" class="alertmsg" routerLink="/public/login">User created successfully. Click here to login.</p>
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col">
+        <label>
+          FIRST NAME<br>
+          <input  type="text" formControlName="firstName">
+        </label>
+        <div class="alert" *ngIf="registerForm.get('firstName').invalid && (registerForm.get('firstName').dirty || registerForm.get('firstName').touched || isSubmitted) && registerForm.get('firstName').errors.required">
+          Firstname is required.
+        </div>
+      </div>
+      <div class="col">
+        <label>
+          LAST NAME<br>
+          <input type="text" formControlName="lastName">
+        </label>
+        <div class="alert" *ngIf="registerForm.get('lastName').invalid && (registerForm.get('lastName').dirty || registerForm.get('lastName').touched || isSubmitted) && registerForm.get('lastName').errors.required">
+          Lastname is required.
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <label>
+          EMAIL ADDRESS<br>
+          <input type="email" formControlName="emailId">
+        </label>
+        <div class="alert" *ngIf="registerForm.get('emailId').invalid && (registerForm.get('emailId').dirty || registerForm.get('emailId').touched || isSubmitted) && registerForm.get('emailId').errors.required">
+          Email is required.
+        </div>
+        <div class="alert" *ngIf="registerForm.get('emailId').invalid && (registerForm.get('emailId').dirty || registerForm.get('emailId').touched || isSubmitted) && registerForm.get('emailId').errors.email">
+          Email is invalid.
+        </div>
+      </div>
+      <div class="col">
+        <label>
+          PHONE NO<br>
+          <input type="tel" formControlName="phoneNo">
+        </label>
+        <div class="alert" *ngIf="registerForm.get('phoneNo').invalid && (registerForm.get('phoneNo').dirty || registerForm.get('phoneNo').touched || isSubmitted) && registerForm.get('phoneNo').errors.required">
+          Phone no is required.
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <label>
+          ADDRESS<br>
+          <input type="text" formControlName="address">
+        </label>
+        <div class="alert" *ngIf="registerForm.get('address').invalid && (registerForm.get('address').dirty || registerForm.get('address').touched || isSubmitted) && registerForm.get('address').errors.required">
+          Address is required.
+        </div>
+      </div>
+      <div class="col">
+        <label>
+          BREIF MEDICAL HISTORY (OPTIONAL)<br>
+          <input type="text" formControlName="medHistory">
+        </label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <label>
+          PASSWORD<br>
+          <input type="password" formControlName="password">
+        </label>
+        <div class="alert" *ngIf="registerForm.get('password').invalid && (registerForm.get('password').dirty || registerForm.get('password').touched || isSubmitted) && registerForm.get('password').errors.required">
+          Password is required.
+        </div>
+      </div>
+      <div class="col">
+        <label>
+          CONFIRM PASSWORD<br>
+          <input type="password" formControlName="confirmPassword">
+        </label>
+        <div class="alert" *ngIf="registerForm.get('confirmPassword').invalid && (registerForm.get('confirmPassword').dirty || registerForm.get('confirmPassword').touched || isSubmitted) && registerForm.get('confirmPassword').errors.required">
+          Confirm Password is required.
+        </div>
+        <div *ngIf="registerForm.errors?.passwordsMismatch" class="alert">
+          Password and confirm password do not match.
+        </div>
+      </div>
+    </div>
+    <!--Register Button-->
+    <button type="submit">Submit</button>
+
+  </form>
+  <div class="loginNavigation" routerLink="/public/login">Already a user? Login</div>
+  
+</div>

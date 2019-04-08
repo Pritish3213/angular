@@ -1,0 +1,150 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "users": [
+    {
+      "fullName": "Manju Sinha",
+      "firstName": "Manju",
+      "lastName": "t",
+      "emailId": "manju@gmail.com",
+      "phoneNo": "954109523",
+      "address": "Mumbai",
+      "medHistory": "",
+      "password": "123",
+      "confirmPassword": "123",
+      "id": 1
+    },
+    {
+      "firstName": "Pritish",
+      "lastName": "Sinha",
+      "emailId": "p@s.com",
+      "phoneNo": "6395844278",
+      "address": "Doon",
+      "medHistory": "",
+      "password": "123",
+      "confirmPassword": "123",
+      "id": 2
+    },
+    {
+      "fullName": "Rishab Negi",
+      "firstName": "Rishab",
+      "lastName": "Negi",
+      "emailId": "alliance.pritishsinha@gmail.com",
+      "phoneNo": "7895191178",
+      "address": "424, sector 8",
+      "medHistory": "",
+      "password": "123",
+      "confirmPassword": "123",
+      "id": 3
+    },
+    {
+      "firstName": "Anup",
+      "lastName": "Sinha",
+      "emailId": "anupsinha@gmail.com",
+      "phoneNo": "7895191178",
+      "address": "424",
+      "medHistory": "",
+      "password": "123",
+      "confirmPassword": "123",
+      "id": 4
+    },
+    {
+      "firstName": "Anup",
+      "lastName": "Sinha",
+      "emailId": "anupsinha@gmail.com",
+      "phoneNo": "7895191178",
+      "address": "424",
+      "medHistory": "",
+      "password": "123",
+      "confirmPassword": "123",
+      "id": 5
+    }
+  ],
+  "bookings": [
+    {
+      "Date": "April 04 2019, 07:00AM",
+      "Nurse": "Konica Raman",
+      "Address": "#95, Doon Hills Colony",
+      "Status": "Payment Pending",
+      "upcoming": true,
+      "past": false
+    },
+    {
+      "Date": "April 2, 2019, 10:00AM",
+      "Nurse": "Aarushi",
+      "Address": "#424, sector 8",
+      "Status": "FINISHED",
+      "past": true,
+      "upcoming": false
+    },
+    {
+      "Date": " March 15, 2019, 09:00AM",
+      "Nurse": "Surbhi Goyal",
+      "Address": " CDCL Building, Plot No. 5, Madhya Marg, 28B, Sector 28B, Chandigarh, 160019",
+      "Status": "FINISHED",
+      "past": true,
+      "upcoming": false
+    },
+    {
+      "Date": "May 20, 2019, 10:00AM",
+      "Nurse": "Sampada Joshi",
+      "Address": "#89, Aamwala, Dehradun",
+      "Status": "Confirmation Pending",
+      "upcoming": true,
+      "past": false
+    },
+    {
+      "Date": "September 05 2019, 06:00AM",
+      "Nurse": "Prarthana Nath",
+      "Address": "ISBT, Dehradun",
+      "Status": "Payment Pending",
+      "upcoming": true,
+      "past": false
+    },
+    {
+      "Date": "January 29 2019, 11:00AM",
+      "Nurse": "Ashlsha Singh",
+      "Address": "#786, Pratapgarh",
+      "Status": "FINISHED",
+      "past": true,
+      "upcoming": false
+    },
+    {
+      "Date": " October 21 2019, 08:00AM",
+      "Nurse": "Aadrika Sharma",
+      "Address": "Vikas Vihar, Chakrata Road",
+      "Status": "FINISHED",
+      "past": true,
+      "upcoming": false
+    }
+  ],
+  "FAQ": [
+    {
+      "question": "What do we do?",
+      "answer": "We provide home nursing service. Our nurses are highly qualified."
+    },
+    {
+      "question": "When to expect our nurses to reach?",
+      "answer": "We provide 24x7 service and we try"
+    },
+    {
+      "question": "I took a CE test and my certificate will not print. What should I do?",
+      "answer": "After successfully taking the test with a score of 75% or greater, your course will automatically move to the “My transcripts” page. To view your transcript, click on the button next to the title to view your certificate and print it. You can email, print, or view the certificate as a PDF."
+    }
+  ]
+}

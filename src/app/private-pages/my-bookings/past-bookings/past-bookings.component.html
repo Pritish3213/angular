@@ -1,0 +1,16 @@
+<!--Data of Past Orders-->
+<div class="bookings">
+  <div *ngIf="pastBookings">
+
+    <!--Iteration through pastBookings array to display-->
+    <div *ngFor="let bookings of pastBookings" class="booking-div">
+
+      <!--If the service has been finished then show in green color-->
+      <p class="light">{{bookings.Date}}<span class="status"
+        [ngStyle]="{'color':bookings.Status === 'FINISHED' ? 'green' : 'blue' }">{{bookings.Status}}</span></p>
+      <p class="heavy">{{bookings.Nurse}}</p>
+      <p class="light">{{bookings.Address}}</p>
+    </div>
+  </div>
+
+</div>

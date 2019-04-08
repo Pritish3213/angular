@@ -1,0 +1,17 @@
+<!--Booking component and to render its child components i.e Past and Upcoming -->
+<div id="container">
+  <div class="background">
+    <div class="heading">MY BOOKINGS</div>
+    <div class="bookings-div">
+      <nav class="nav">
+
+        <!--Past and Upcoming Data navigation bar-->
+        <a class="nav-link" routerLink="/user/mypage/bookings/upcoming" routerLinkActive="active">UPCOMING</a>
+        <a class="nav-link" routerLink="/user/mypage/bookings/past" routerLinkActive="active">PAST</a>
+      </nav>
+       
+      <!--rendering of data her3-->
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

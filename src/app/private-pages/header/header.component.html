@@ -1,0 +1,20 @@
+
+<!--Dropdown menu for user logged in-->
+<ul class="nav justify-content-end">
+  <div class="d"><span class="g">NURSES</span>ONLINE</div>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{fullname}}</a>
+    <div class="dropdown-menu">
+
+      <!--Menu contains 3 links 1)Profile 2)My Booking 3)FAQ-->
+      <a class="dropdown-item" routerLink="/user/mypage/profile">Profile</a>
+      <a class="dropdown-item" routerLink="/user/mypage/bookings">My Bookings:  
+      <span>{{count}}</span> </a>
+      <a class="dropdown-item" routerLink="/user/mypage/faq">FAQs</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" (click)="logout()">Logout</a> <!--on clicking LOgout, logout() will be invoked-->
+    </div>
+  </li>
+</ul>
+<!-- Child component of drop down items will be displayed here-->
+<router-outlet></router-outlet> 

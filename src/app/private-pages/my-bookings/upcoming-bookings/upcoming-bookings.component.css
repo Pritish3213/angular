@@ -1,0 +1,18 @@
+.booking-div{
+    background-color: rgb(243, 243, 243);
+    margin-top: 15px;
+    padding: 10px;
+}
+.heavy{
+    color: black;
+    font-size: 17px;
+}
+.light{
+    color: black;
+    font-size: 12px;
+}
+.status{
+    color: black;
+    float: right;
+    font-size: 12px
+}

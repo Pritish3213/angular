@@ -1,0 +1,59 @@
+h2{
+    color: rgb(4, 201, 4);
+    text-align: center;
+    font-size: 30px;
+}
+
+.loginform-div{
+    font-size: 15px;
+    color: grey;
+    background-color: white;
+    margin: 50px auto;
+    width: 30%;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+input{
+    width: 270px;
+    padding: 5px 5px;
+    margin: 0px 0;
+    display: inline-block;
+    border: 1px solid grey;
+    
+}
+
+.loginform-div button{
+    width: 270px;
+    background-color: rgb(4, 201, 4);
+    color: white;
+    font-weight: 60px;
+    padding: 5px 20px;
+    margin: 15px 0;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    color: grey;
+}
+
+.alert{
+    color: red;
+    font-size: 10px;
+    margin-bottom: 8px;
+    padding: 0;
+}
+.alertmsg{
+    color: red;
+    font-size: 10px;
+    text-align: center;
+}
+.regNavigation{
+    width: 100%;
+    color: black;
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px 10px;
+    background-color: lightgrey;
+}

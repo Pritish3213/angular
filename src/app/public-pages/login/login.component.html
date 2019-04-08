@@ -1,0 +1,34 @@
+<!-- Login form field-->
+
+<div class="loginform-div">
+  <h2>Login</h2>
+  <hr> 
+  <!--Validation of login form-->
+  <p *ngIf="errorMessage && loginForm.valid" class="alertmsg">Invalid credentials</p>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+    <label>
+      EMAIL ADDRESS<br>
+      <input type="email" formControlName="emailId">
+    </label> <!--Validation of email-->
+    <div class="alert" *ngIf="loginForm.get('emailId').invalid && (loginForm.get('emailId').dirty || loginForm.get('emailId').touched || isSubmitted) && loginForm.get('emailId').errors.required">
+      Email is required.
+    </div>
+    <div class="alert" *ngIf="loginForm.get('emailId').invalid && (loginForm.get('emailId').dirty || loginForm.get('emailId').touched || isSubmitted) && loginForm.get('emailId').errors.email">
+      Email is invalid.
+    </div>
+    <br>
+    <label>
+      PASSWORD<br>
+      <input type="password" formControlName="password">
+    </label> <!--Validation on Passwords-->
+    <div class="alert" *ngIf="loginForm.get('password').invalid && (loginForm.get('password').dirty || loginForm.get('password').touched || isSubmitted) && loginForm.get('password').errors.required">
+      Password is required.
+    </div>
+
+    <button type="submit">Submit</button>
+
+  </form>
+  <div class="regNavigation" routerLink="/public/register">New User? Login</div>
+
+</div>

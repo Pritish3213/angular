@@ -1,0 +1,70 @@
+<!--Profile Data of the logged in user-->
+
+<div id="container">
+<div class="background">
+  <div class="heading">PROFILE</div>
+  <div class="updateform-div">
+    <img src="assets/profile_picture.jpg">
+    <form [formGroup]="updateForm" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="col">
+          <label>
+            FULL NAME<br>
+            <input  type="text" formControlName="fullName">
+          </label> <!--Validation on the form fields to avoid wrong type of input-->
+            <div class="alert" *ngIf="updateForm.get('fullName').invalid && (updateForm.get('fullName').dirty || updateForm.get('fullName').touched || isSubmitted) && updateForm.get('fullName').errors.required">
+              Fullname is required.
+            </div>
+        </div>
+        <div class="col">
+          <label>
+            EMAIL ADDRESS<br>
+            <input type="email" formControlName="emailId">
+          </label>
+          <div class="alert" *ngIf="updateForm.get('emailId').invalid && (updateForm.get('emailId').dirty || updateForm.get('emailId').touched || isSubmitted) && updateForm.get('emailId').errors.required">
+            Email is required.
+          </div>
+          <div class="alert" *ngIf="updateForm.get('emailId').invalid && (updateForm.get('emailId').dirty || updateForm.get('emailId').touched || isSubmitted) && updateForm.get('emailId').errors.email">
+            Email is invalid.
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label>
+            ADDRESS<br>
+            <input type="text" formControlName="address">
+          </label>
+          <div class="alert" *ngIf="updateForm.get('address').invalid && (updateForm.get('address').dirty || updateForm.get('address').touched || isSubmitted) && updateForm.get('address').errors.required">
+            Address is required.
+          </div>
+        </div>
+        <div class="col">
+          <label>
+            PHONE NO<br>
+            <input type="tel" formControlName="phoneNo">
+          </label>
+          <div class="alert" *ngIf="updateForm.get('phoneNo').invalid && (updateForm.get('phoneNo').dirty || updateForm.get('phoneNo').touched ||isSubmitted) && updateForm.get('phoneNo').errors.required">
+            Phone no is required.
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label>  <!--This field is option so no validation required-->
+            BREIF MEDICAL HISTORY (OPTIONAL)<br>
+            <input type="text" formControlName="medHistory">
+          </label>
+        </div>
+
+        <!--submit button to update the form-->
+        <div class="col">
+          <button type="submit">Update Profile</button>
+        </div>
+      </div>
+
+    </form>
+    
+  </div>
+  </div>
+</div>
